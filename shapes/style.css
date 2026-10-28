@@ -1,0 +1,39 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    /* display: flex; */
+    background-color: antiquewhite;
+    /* align-items: center; */
+
+}
+main{
+    display: flex;
+}
+div{
+    height: 200px;
+    width: 200px;
+    
+}
+
+#box1{
+ 
+    background-color: rgb(5, 248, 167);
+    
+}
+
+#box2{
+  
+    background-color: rgb(218, 4, 4);
+ 
+}
+
+#box3{
+    
+    background-color: rgb(37, 5, 218);
+    
+}

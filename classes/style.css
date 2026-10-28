@@ -1,0 +1,22 @@
+*{
+    margin: 0%;
+    padding: 0%0;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    
+}
+.colorfont{
+    color: brown;
+    text-align: center;
+    font-weight: bolder;
+    background-color: aqua;
+}
+
+h3{
+    background-color: brown;
+    margin: 20px;
+    padding: 30px;
+}

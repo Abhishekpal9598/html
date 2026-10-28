@@ -1,0 +1,173 @@
+<!-- Internl  css -->
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Internal CSS Example</title>
+    <style>
+        h1 {
+            color: blue;
+            text-align: center;
+        }
+
+        p {
+            color: green;
+            font-size: 20px;
+        }
+
+        button {
+            background-color: orange;
+            color: white;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to My Web Page</h1>
+    <p>This paragraph is styled using Internal CSS.</p>
+    <button>Click Me</button>
+</body>
+</html><!DOCTYPE html>
+<html>
+<head>
+    <title>Internal CSS Example</title>
+    <style>
+        h1 {
+            color: blue;
+            text-align: center;
+        }
+
+        p {
+            color: green;
+            font-size: 20px;
+        }
+
+        button {
+            background-color: orange;
+            color: white;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to My Web Page</h1>
+    <p>This paragraph is styled using Internal CSS.</p>
+    <button>Click Me</button>
+</body>
+</html>  
+
+
+ inline css -->  
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Inline CSS Example</title>
+</head>
+<body>
+    <h1 style="color: blue; text-align: center;">
+        Welcome to My Web Page
+    </h1>
+    <p style="color: green; font-size: 20px;">
+        This paragraph is styled using Inline CSS.
+    </p>
+    <button style="background-color: orange; color: white; padding: 10px;">
+        Click Me
+    </button>
+</body>
+</html>
+
+  //  external css -->
+
+<!-- <!DOCTYPE html>
+<html>
+
+<head>
+    <title>External CSS Example</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Welcome to My Web Page</h1>
+</body>
+
+</html> -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Credit Card Payment</title>
+    <script>
+        function validatePayment() {
+            let cardName = document.getElementById("cardName").value;
+            let cardNumber = document.getElementById("cardNumber").value;
+            let expiryMonth = document.getElementById("expiryMonth").value;
+            let expiryYear = document.getElementById("expiryYear").value;
+            let cvv = document.getElementById("cvv").value;
+
+            // Validate card holder name
+            if (cardName.trim() === "") {
+                alert("Please enter card holder name.");
+                return false;
+            }
+
+            // Validate card number
+            let cardPattern = /^[0-9]{16}$/;
+            if (!cardPattern.test(cardNumber)) {
+                alert("Card number must contain exactly 16 digits.");
+                return false;
+            }
+
+            // Validate expiry month
+            let month = parseInt(expiryMonth);
+            if (month < 1 || month > 12) {
+                alert("Please enter a valid expiry month.");
+                return false;
+            }
+
+            // Validate expiry year
+            if (expiryYear === "") {
+                alert("Please select expiry year.");
+                return false;
+            }
+
+            // Validate CVV
+            let cvvPattern = /^[0-9]{3}$/;
+            if (!cvvPattern.test(cvv)) {
+                alert("CVV must contain exactly 3 digits.");
+                return false;
+            }
+
+            alert("Payment information is valid!");
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <h1>Credit Card Payment</h1>
+    <form onsubmit="return validatePayment()">
+        <label>Card Holder Name:</label>
+        <input type="text" id="cardName">
+        <br><br>
+
+        <label>Card Number:</label>
+        <input type="text" id="cardNumber" placeholder="16 digit card number">
+        <br><br>
+
+        <label>Expiry Month:</label>
+        <input type="number" id="expiryMonth" min="1" max="12">
+        <br><br>
+
+        <label>Expiry Year:</label>
+        <input type="number" id="expiryYear" placeholder="YYYY">
+        <br><br>
+
+        <label>CVV:</label>
+        <input type="password" id="cvv" maxlength="3">
+        <br><br>
+
+        <input type="submit" value="Pay Now">
+    </form>
+</body>
+</html>

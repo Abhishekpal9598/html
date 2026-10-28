@@ -1,0 +1,299 @@
+ <!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>User Registration</title>
+    <script>
+        function validateRegistration() {
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("password").value;
+            let confirmPassword = document.getElementById("confirmPassword").value;
+            let phone = document.getElementById("phone").value;
+            let gender = document.querySelector('input[name="gender"]:checked');
+
+            // Check name
+            if (name.trim() === "") {
+                alert("Please enter your name.");
+                return false;
+            }
+
+            // Check email
+            let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+
+            // Check password
+            if (password.length < 6) {
+                alert("Password must contain at least 6 characters.");
+                return false;
+            }
+
+            // Check confirm password
+            if (password !== confirmPassword) {
+                alert("Passwords do not match.");
+                return false;
+            }
+
+            // Check phone number
+            let phonePattern = /^[0-9]{10}$/;
+            if (!phonePattern.test(phone)) {
+                alert("Phone number must contain exactly 10 digits.");
+                return false;
+            }
+
+            // Check gender
+            if (!gender) {
+                alert("Please select your gender.");
+                return false;
+            }
+
+            alert("Registration successful!");
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <h1>User Registration</h1>
+    <form onsubmit="return validateRegistration()">
+        <label>Full Name:</label>
+        <input type="text" id="name">
+        <br><br>
+
+        <label>Email:</label>
+        <input type="text" id="email">
+        <br><br>
+
+        <label>Password:</label>
+        <input type="password" id="password">
+        <br><br>
+
+        <label>Confirm Password:</label>
+        <input type="password" id="confirmPassword">
+        <br><br>
+
+        <label>Phone:</label>
+        <input type="text" id="phone">
+        <br><br>
+
+        <label>Gender:</label>
+        <input type="radio" name="gender" value="Male"> Male
+        <input type="radio" name="gender" value="Female"> Female
+        <br><br>
+
+        <input type="submit" value="Register">
+    </form>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>User Login</title>
+    <script>
+        function validateLogin() {
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("password").value;
+
+            // Check email
+            if (email.trim() === "") {
+                alert("Please enter your email.");
+                return false;
+            }
+
+            // Validate email format
+            let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+
+            // Check password
+            if (password.trim() === "") {
+                alert("Please enter your password.");
+                return false;
+            }
+
+            // Check password length
+            if (password.length < 6) {
+                alert("Password must contain at least 6 characters.");
+                return false;
+            }
+
+            alert("Login validation successful!");
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <h1>User Login</h1>
+    <form onsubmit="return validateLogin()">
+        <label>Email:</label>
+        <input type="text" id="email">
+        <br><br>
+
+        <label>Password:</label>
+        <input type="password" id="password">
+        <br><br>
+
+        <input type="submit" value="Login">
+    </form>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>User Profile</title>
+    <script>
+        function validateProfile() {
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let phone = document.getElementById("phone").value;
+            let dob = document.getElementById("dob").value;
+            let address = document.getElementById("address").value;
+
+            // Validate name
+            if (name.trim() === "") {
+                alert("Please enter your name.");
+                return false;
+            }
+
+            // Validate email
+            let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+
+            // Validate phone
+            let phonePattern = /^[0-9]{10}$/;
+            if (!phonePattern.test(phone)) {
+                alert("Please enter a valid 10-digit phone number.");
+                return false;
+            }
+
+            // Validate date of birth
+            if (dob === "") {
+                alert("Please select your date of birth.");
+                return false;
+            }
+
+            // Validate address
+            if (address.trim() === "") {
+                alert("Please enter your address.");
+                return false;
+            }
+
+            alert("Profile validation successful!");
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <h1>User Profile</h1>
+    <form onsubmit="return validateProfile()">
+        <label>Full Name:</label>
+        <input type="text" id="name">
+        <br><br>
+
+        <label>Email:</label>
+        <input type="text" id="email">
+        <br><br>
+
+        <label>Phone:</label>
+        <input type="text" id="phone">
+        <br><br>
+
+        <label>Date of Birth:</label>
+        <input type="date" id="dob">
+        <br><br>
+
+        <label>Address:</label>
+        <br>
+        <textarea id="address" rows="4" cols="30"></textarea>
+        <br><br>
+
+        <input type="submit" value="Update Profile">
+    </form>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Credit Card Payment</title>
+    <script>
+        function validatePayment() {
+            let cardName = document.getElementById("cardName").value;
+            let cardNumber = document.getElementById("cardNumber").value;
+            let expiryMonth = document.getElementById("expiryMonth").value;
+            let expiryYear = document.getElementById("expiryYear").value;
+            let cvv = document.getElementById("cvv").value;
+
+            // Validate card holder name
+            if (cardName.trim() === "") {
+                alert("Please enter card holder name.");
+                return false;
+            }
+
+            // Validate card number
+            let cardPattern = /^[0-9]{16}$/;
+            if (!cardPattern.test(cardNumber)) {
+                alert("Card number must contain exactly 16 digits.");
+                return false;
+            }
+
+            // Validate expiry month
+            let month = parseInt(expiryMonth);
+            if (month < 1 || month > 12) {
+                alert("Please enter a valid expiry month.");
+                return false;
+            }
+
+            // Validate expiry year
+            if (expiryYear === "") {
+                alert("Please select expiry year.");
+                return false;
+            }
+
+            // Validate CVV
+            let cvvPattern = /^[0-9]{3}$/;
+            if (!cvvPattern.test(cvv)) {
+                alert("CVV must contain exactly 3 digits.");
+                return false;
+            }
+
+            alert("Payment information is valid!");
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <h1>Credit Card Payment</h1>
+    <form onsubmit="return validatePayment()">
+        <label>Card Holder Name:</label>
+        <input type="text" id="cardName">
+        <br><br>
+
+        <label>Card Number:</label>
+        <input type="text" id="cardNumber" placeholder="16 digit card number">
+        <br><br>
+
+        <label>Expiry Month:</label>
+        <input type="number" id="expiryMonth" min="1" max="12">
+        <br><br>
+
+        <label>Expiry Year:</label>
+        <input type="number" id="expiryYear" placeholder="YYYY">
+        <br><br>
+
+        <label>CVV:</label>
+        <input type="password" id="cvv" maxlength="3">
+        <br><br>
+
+        <input type="submit" value="Pay Now">
+    </form>
+</body>
+</html>

@@ -1,0 +1,38 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+html,body{
+    width: 50%;
+    height: 100%;
+}
+
+body{
+    background-color: rgb(255, 140, 0);
+}
+#box1{
+    background-color: rgb(126, 126, 219);
+    width: 40px;
+    height: 45px;
+    border-style: double;
+    border-width: 10px;
+    border-radius: 50%;
+     
+}
+#box2{
+    background-color: rgb(14, 14, 15);
+    width: 200px;
+    height: 200px;
+    border-style: dashed;
+    border-bottom-width: 3px;
+    border-radius: 50%;
+    
+}
+
+h1{
+    border-radius: 10px;
+    border-color: brown;
+    border-width: 10px;
+    border-style:solid;
+  
+}

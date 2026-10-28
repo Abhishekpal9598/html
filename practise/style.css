@@ -1,0 +1,33 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+div{
+    background-color: aqua;
+
+}
+
+#header{
+    height: 10%;
+    width: 100%;
+    background-color: aquamarine;
+    position: fixed;
+    display: flex;
+    align-items: center;
+}
+
+#page1{
+    height: 90%;
+    width: 100%;
+    background-color: blueviolet;
+
+}
+
+#page2{
+    height: 90%;
+    width: 100%;
+    background-color: rgb(9, 122, 32);
+
+}
